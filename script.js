@@ -1,7 +1,5 @@
 const containerVideos = document.querySelector('.videos__container')
 
-
-
 const api = fetch('http://localhost:3000/videos') //buscar
 .then(resposta => resposta.json())
 .then((videos) =>
@@ -17,3 +15,7 @@ const api = fetch('http://localhost:3000/videos') //buscar
         </li>`
     })
 )
+.catch((error)=>{
+    containerVideos.innerHTML = `
+    <p>Houve um erro ao carregar os vídeos: ${error} </p>`
+})
