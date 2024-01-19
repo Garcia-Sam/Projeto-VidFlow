@@ -1,6 +1,5 @@
 const containerVideos = document.querySelector('.videos__container')
 
-
 async function buscarEMostrarVideos() {
     try{
         const busca = await fetch('http://localhost:3000/videos') //Aguardar(await) Busca(fetch) ser feita
@@ -32,6 +31,8 @@ async function buscarEMostrarVideos() {
 }
 buscarEMostrarVideos()
 
+
+// Filtros
 const barraDePesquisa = document.querySelector('.pesquisar__input');
 barraDePesquisa.addEventListener("input", filtrarPesquisa ());
 
